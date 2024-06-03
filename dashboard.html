@@ -8,7 +8,7 @@
     <style>
         .container{
             width: 100%;
-            height: 800px;
+            height:500px;
             background-color:rgb(224, 219, 219);
         }
         .bot{
@@ -79,19 +79,31 @@
             height: 30px;
             width: 100%;
             display: flex;
-            column-gap:110px;
+            
             align-items: center;
             background-color: white;
-            text-align: left;
-            
+            text-align: left;   
         }
-        .wap{
-            display: flex;
-            column-gap: 90px;
-            margin-top:10px;
+        .tab2{
+            padding-left:90px;
         }
-        .wap6:hover{
-            background-color:gray;
+        .tab3{
+            padding-left:100px;
+        }
+        .tab4{
+            padding-left:120px;
+        }
+        .tab5{
+            padding-left:120px;
+        }
+        .tab6{
+            padding-left:110px;
+        }
+        .tab7{
+            padding-left:60px;
+        }
+        .tab8{
+            padding-left:120px;
         }
         .map{
             height:30px;
@@ -102,20 +114,14 @@
             background-color: white;
             align-items: center;
         }
-        .wap4{
-            padding-left:5px;
-        }
-        .wap5{
-            padding-left:19px;
-        }
-        .wap6{
-            padding-right:25px;
-        }
-        .wap8{
-            padding-left:50px;
-        }
         .map8{
             padding-left:50px;
+        }
+        .wap{
+            height:20px;
+            width:100%;
+            display: flex;
+            column-gap:21px;
         }
     </style>
 </head>
@@ -198,58 +204,41 @@
                         <h3>Actions</h3>
                 </div>
             </div>
-            <div class="wap">
-                <div class="wap1">
-                    <h>Casual Leave</h>
-                </div>
-                <div class="wap2">
-                    <h>8 Mar 2019</h>
-                </div>
-                <div class="wap3">
-                    <h>9 Mar 2019</h>
-                </div>
-                <div class="wap4">
-                    <h>2 days</h>
-                </div>
-                <div class="wap5">
-                    <h>Going To Hospital</h>
-                </div>
-                <div class="wap6">
-                    <h>New</h>
-                </div>
-                <div class="wap7">
-                    <h>Richard Miles</h>
-                </div>
-                <div class="wap8">
-                    <h>&#8942;</h>
-                </div>
-            </div>
-            <div class="map">
-            <div class="map1">
-            <h>Casual Leave</h>
-            </div>
-            <div class="map2">
-            <h>10 Jan 2019</h>
-            </div>
-            <div class="map3">
-            <h>10 Jan 2019</h>
-            </div>
-            <div class="map4">
-            <h>First Half</h>
-            </div>
-            <div class="map5">
-            <h>Going to Hospital</h>
-            </div>
-            <div class="map6">
-            <h>Declined</h>
-            </div>
-            <div class="map7">
-            <h>Richard Miles</h>
-            </div>
-            <div class="map8">
-            <h> &#8942;</h>
-            </div>
-            </div>
+    <div class="wap">
+        <div class="wap1">
+        <form>
+        <select id="Leave Type" name="Leave Type">
+          <option>Casual Leave</option>
+          <option>Emergency Leave</option>
+          <option>Medical Leave</option>
+        </select>
+        </form>
+        </div>
+        <div class="wap2">
+          <input type="date">
+          </div>
+          <div class="wap3">
+          <input type="date">
+          </div>
+          <div class="wap4">
+          <input type="number" min="1" placeholder="Days">
+          </div>
+          <div class="wap5">
+          <input type="text" placeholder="Reason">
+          </div>
+          <div class="wap6">
+        <select>
+          <option>Approved</option>
+          <option>Declined</option>
+       </select>
+       </div>
+       <div class="wap7">
+        <input type="text" placeholder="Approved by">
+       </div>
+       <div class="wap8">
+        <input type="text" placeholder="Action">
+       </div>
+    </div>
     </div>
 </body>
 </html>

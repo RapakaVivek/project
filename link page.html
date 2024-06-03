@@ -7,57 +7,65 @@
 </head>
 <style>
     .container{
-      background-color: rgb(172, 168, 168);
+        height:600px;
+        
     }
-     .tab{
-            height: 30px;
-            width:100%;
-            display: flex;
-            column-gap:110px;
-            align-items: center;
-            text-align: left;
-            border: solid;
-            border-color:gray;
-            background-color:rgb(133, 128, 128);
-        }
-        .wap{
-         width:100%;
-         display: flex;
-         column-gap:30px;
-         border: solid;
-         border-color:white;
-         background-color: white;
-         margin-top:5px;
-        }
-        .wap4 input{
-            width:60px;
-            text-align: center;
-            margin-left: 40px;
-        }
-        .wap5 input{
-            text-align: center;
-            margin-left:35px;
-        }
-        .wap7 input{
-            text-align: center;
-            width:100px;
-            margin-left:70px;
-        }
-        .wap8 input{
-            text-align: center;
-            width:100px;
-            margin-left:40px;
-        }
-        .map{
-            height: 30px;
-            width: 100%;
-            text-align: center;
-            margin-top: 10px;
-            font-size: 30px;
-        }
+    .main{
+        display: flex;
+        column-gap:100px;
+        border: solid;
+        width:600px;
+        margin-left:350px;
+        background-color: rgb(201, 193, 193);
+    }
+    .tab{
+        margin-left: 20px;
+    }
+    .wap{
+        margin-left: 30px;
+    }
+    .wap1{
+        margin-top: 25px;
+    }
+    .wap2{
+        margin-top: 20px;
+    }
+    .wap3{
+        margin-top: 20px;
+    }
+    .wap4{   
+        margin-top: 20px;
+     }
+    .wap5 {
+        width: 300px;
+        margin-top: 20px;
+    }
+    .wap6{
+        margin-top: 20px;
+    }
+    .wap7{
+        margin-top: 20px;
+    }
+    .wap8{
+        margin-top: 20px;
+    }
+    .roll{
+     padding-left:600px;
+     margin-top: 20px;
+    }
+    .roll button{
+        font-size:18px;
+    }
+    .top{
+        text-align: center;
+    }
 </style>
 <body>
     <div class="container">
+        <div class="top">
+            <h1>Application of Leave</h1>
+        </div>
+        <div class="main">
     <div class="tab">
                 <div class="tab1">
                     <h3>Leave Type</h3>
@@ -119,44 +127,10 @@
         <input type="text" placeholder="Action">
        </div>
     </div>
-    <div class="wap">
-        <div class="wap1">
-        <form>
-        <select id="Leave Type" name="Leave Type">
-          <option>Casual Leave</option>
-          <option>Emergency Leave</option>
-          <option>Medical Leave</option>
-        </select>
-        </form>
-        </div>
-        <div class="wap2">
-          <input type="date">
-          </div>
-          <div class="wap3">
-          <input type="date">
-          </div>
-          <div class="wap4">
-          <input type="number" min="1" placeholder="Days">
-          </div>
-          <div class="wap5">
-          <input type="text" placeholder="Reason">
-          </div>
-          <div class="wap6">
-        <select>
-          <option>Approved</option>
-          <option>Declined</option>
-       </select>
-       </div>
-       <div class="wap7">
-        <input type="text" placeholder="Approved by">
-       </div>
-       <div class="wap8">
-        <input type="text" placeholder="Action">
-       </div>
     </div>
-    <div class="map">
-        <button>Submit</button>
-    </div> 
-</div>    
+    <div class="roll">
+        <a href="dashboard.html"><button>submit</button></a>
+    </div>
+    </div>
 </body>
 </html>
