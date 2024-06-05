@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .B{
+            height:580px;
+            width:500px;
+            margin-left:400px;
+            border: solid;
+            background-color: rgb(204, 195, 195);
+            padding-left: 50px;
+        }
+        .B input{
+            display: block;
+            margin-bottom:20px;
+        }
+        .H{
+            padding-left: 100px;
+        }
+        .C button{
+            margin-left:200px;
+        }
+        .C button a{
+            text-decoration: none;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="B">
+        <div class="H">
+            <h2>Application of Leave</h2>
+        </div>
+        Leave Type :<input type="text" name="Leave Type" id="Leave Type">
+        From :<input type="date" name="From" id="From">
+        To :<input type="date" name="To" id="To">
+        No of Days :<input type="number" min="1" name="No of Days" id="No of Days">
+        Reason :<input type="text" name="Reason" id="Reason">
+        Status :<input type="text" name="Status" id="Status">
+        Approved by :<input type="text" name="Approved by" id="Approved by">
+        Action :<input type="text" name="Action" id="Action">
+    <div class="C">
+       <button onclick="addHtmlTableRow();"><a href="dashboard.html">Add Leave</a></button>
+    </div>
+    </div>
+    <script>
+
+        // add Row
+    
+        function addHtmlTableRow()
+        {
+            // get the table by id
+            // create a new row and cells
+            // get value from input text
+            // get the values into row cell's
+            var table = document.getElementById("table"),
+                newRow = table.insertRow(table.length),
+                cell1 = newRow.insertCell(0),
+                cell2 = newRow.insertCell(1),
+                cell3 = newRow.insertCell(2),
+                cell4 = newRow.insertCell(3),
+                cell5 = newRow.insertCell(4),
+                cell6 = newRow.insertCell(5),
+                cell7 = newRow.insertCell(6),
+                cell8 = newRow.insertCell(7),
+                LeaveType = document.getElementById("Leave Type").value,
+                From = document.getElementById("From").value,
+                To = document.getElementById("To").value,
+                NoOfDays = document.getElementById("No of Days").value,
+                Reason = document.getElementById("Reason").value,
+                Status = document.getElementById("Status").value,
+                Approvedby = document.getElementById("Approved by").value,
+                Action = document.getElementById("Action").value;
+    
+            cell1.innerHTML = LeaveType;
+            cell2.innerHTML = From;   
+            cell3.innerHTML = To;   
+            cell4.innerHTML = NoOfDays;       
+            cell5.innerHTML = Reason;   
+            cell6.innerHTML = Status;   
+            cell7.innerHTML = Approvedby;   
+            cell8.innerHTML = Action; 
+        }
+      </script>      
+</body>
+</html>
