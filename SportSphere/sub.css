@@ -1,0 +1,486 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.plan {
+   height:50px; 
+   margin-top: 100px;
+}
+#text{
+    background: linear-gradient(to left,red,gray,violet,blue,green);
+    background-clip: text;
+    display: inline;
+    margin-left: 400px;
+    font-size: 40px;
+    color: transparent;
+    animation: animated 5s linear infinite;
+  }
+  @keyframes animated{
+    to{
+        background-position-x: 161px;
+    }
+  }
+  .disney{
+    margin-left: 250px;
+    display: flex;
+    gap:500px;
+  }
+  .hotstar {
+    margin-left: 550px;
+    margin-top: 30px;
+    color:blueviolet;
+  }
+  .jio {
+    margin-left: 600px;
+    margin-top: 30px;
+    color:rgb(245, 16, 150);
+  }
+  .subscribe{
+    display: flex;
+    gap: 230px;
+    margin-left: 110px;
+    margin-top: 40px;
+  }
+  
+  .subscribe .free {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg, rgb(7, 7, 85), rgb(35, 5, 63),rgb(121, 114, 114),rgb(38, 7, 66), rgb(48, 7, 87));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    animation: anime 2s linear infinite;
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+ .subscribe .free h1{
+    margin-left: 140px;
+    color:yellowgreen;
+  }
+ .subscribe .free img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin-left:160px;
+  }
+  .subscribe .free .free-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe .free .free-sub i{
+    font-size: 30px;
+  }
+  .subscribe .free .free-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe .premium h1{
+    margin-left: 120px;
+    color:goldenrod;
+  }
+  .subscribe .premium img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin-left:170px;
+  }
+  .subscribe .premium h2{
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .subscribe .premium p {
+    font-size: 20px;
+    margin-left: 180px;
+  }
+  .subscribe .free button {
+    width:180px;
+    height:50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color:white;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe .premium .premium-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe .premium .premium-sub i{
+    font-size: 30px;
+  }
+  .subscribe .premium .premium-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe .premium button {
+    width:180px;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe .premium button:hover {
+    width:190px;
+    height:60px;
+    font-size: 20px;
+  }
+  .subscribe .premium {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg, rgb(7, 7, 85), rgb(35, 5, 63),rgb(121, 114, 114),rgb(38, 7, 66), rgb(48, 7, 87));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    animation: anime 2s linear infinite;
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+
+.subscribe2{
+    display: flex;
+    gap: 230px;
+    margin-left: 110px;
+    margin-top: 40px;
+  }
+ 
+  .subscribe2 .free {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg,rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(77, 72, 72),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    animation: anime 2s linear infinite;
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+ .subscribe2 .free h1{
+    margin-left: 150px;
+    color:yellowgreen;
+  }
+ .subscribe2 .free img{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    margin-left:170px;
+  }
+  .subscribe2 .free .free-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe2 .free .free-sub i{
+    font-size: 30px;
+  }
+  .subscribe2 .free .free-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe2 .free button {
+    width:180px;
+    height:50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color:white;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe2 .premium h1{
+    margin-left: 120px;
+    color:goldenrod;
+  }
+  .subscribe2 .premium h1{
+    margin-left: 120px;
+    color:goldenrod;
+  }
+  .subscribe2 .premium img{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    margin-left:180px;
+  }
+  .subscribe2 .premium h2{
+    margin-left: 190px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+  .subscribe2 .premium p {
+    font-size: 20px;
+    margin-left: 190px;
+  }
+  .subscribe2 .premium .premium-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe2 .premium .premium-sub i{
+    font-size: 30px;
+  }
+  .subscribe2 .premium .premium-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe2 .premium button {
+    width:180px;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe2 .premium button:hover {
+    width:190px;
+    height:60px;
+    font-size: 20px;
+  }
+  .subscribe2 .premium {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
+    color: transparent;
+    background: linear-gradient(200deg,rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(77, 72, 72),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98),rgb(204, 32, 98));
+    background-size: 600% 600%; /* Increase the size to allow the gradient to move */
+    animation: anime 2s linear infinite;
+    box-shadow: 0px 8px 10px rgb(24, 24, 85);
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+
+
+
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(173, 16, 147);
+  height:400px;
+  margin-top: 100px;
+}
+.footer div {
+ margin-top: 40px;
+}
+.footer div ul li{
+  list-style: none;
+  font-size: 18px;
+  color:white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.footer div ul li:hover {
+  color:yellow;
+  font-size: 19px;;
+}
+.footer div ul a{
+  text-decoration: none;
+  color:black;
+}
+.footer div img{
+  width:200px;
+  height:80px;
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.footer div ul .bold{
+  font-size: 22px;
+  color:white;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer div p{
+  font-size: 30px;
+  margin-left: 30px;
+  color:rgb(200, 245, 38);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.box input {
+  margin-top: 50px;
+  border-radius: 10px;
+  border:none;
+  outline:none;
+  border-bottom: 3px solid greenyellow;
+  color:white;
+  background-color: black;
+  width:350px;
+  height:50px;
+  font-size: 16px;
+  padding-left:20px;
+}
+.box button {
+  width:150px;
+  height:50px;
+  font-size: 20px;
+  background-color: greenyellow;
+  color:crimson;
+  border-radius: 10px;
+  border: none;
+}
+.box button:hover {
+  background-color: red;
+  color:white;
+}
+.box{
+  margin-top: -180px;
+  margin-left: 450px;
+}
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(131, 18, 106);
+  padding: 0 20px;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar img {
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
+}
+
+.topics {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topics li {
+  position: relative;
+}
+
+.topics a {
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-size:18px;
+  padding: 15px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.topics a:hover {
+  color: orange;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: white;
+  color: crimson;
+}
+
+.topics li:hover .dropdown {
+  display: block;
+}
+
+.btns{
+  margin-left: 80px;
+  display: flex;
+}
+.navbar button {
+  height: 35px;
+  width: 120px;
+  background-color: orange;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 0;
+  margin-left: 10px; 
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: rgb(20, 85, 105);
+  color: white;
+}

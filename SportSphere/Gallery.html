@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(131, 18, 106);
+    padding: 0 20px;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    margin-left: -30px;
+}
+
+.navbar img {
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+}
+
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topics li {
+    position: relative;
+    margin-left: 10px;
+}
+
+.topics a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.3rem;
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.topics a:hover {
+    color: orange;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: white;
+    color: crimson;
+}
+
+.topics li:hover .dropdown {
+    display: block;
+}
+
+.buttons{
+    margin-left: 80px;
+}
+.navbar button {
+    height: 35px;
+    width: 120px;
+    background-color: orange;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 0;
+    margin-left: 10px; 
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: rgb(20, 85, 105);
+    color: white;
+}
+        .contain h1{
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            margin-top: 100px;
+        }
+        .photo{
+            margin: 100px 0 200px;
+            width: 70%;
+            height: 450px;
+            padding-top: 100px;
+            margin-left: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            border:1px solid rgb(248, 246, 246);
+            border-radius: 50px;
+        }
+        .photo img{
+            width: 10%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.68);
+            transition: all ease-in-out 0.5s;
+        }
+        .photo img:hover{
+            width: 25%;
+        }
+.rotate {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+  padding-top: 70px;
+  justify-content: center;
+  background-color:black;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-top: -200px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.7s;
+}
+
+.image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px);
+}
+
+.image-container span img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  border:1px solid whitesmoke;
+}
+.btn-container {
+  position: relative;
+  width: 80%;
+}
+
+.btn1, .btn2 {
+  position: absolute;
+  bottom: -140px;
+  background-color: black;
+  color: white;
+  border-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  filter: brightness(1.5);
+}
+.btn2:hover {
+  filter: brightness(1.5);
+}
+
+#prev {
+  left: 20%;
+}
+
+#next {
+  right: 20%;
+}
+.A h1{
+    color: rgb(247, 243, 244);
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    border: 1px solid;
+    width:300px;
+    border-radius: 10px;
+    margin-left: 500px;
+}
+.footer{
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(173, 16, 147);
+        height:400px;
+    }
+    .footer div {
+       margin-top: 40px;
+    }
+    .footer div ul li{
+        list-style: none;
+        font-size: 18px;
+        color:white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    .footer div ul li:hover {
+        color:yellow;
+        font-size: 19px;;
+    }
+    .footer div ul a{
+        text-decoration: none;
+        color:black;
+    }
+    .footer div img{
+        width:200px;
+        height:80px;
+        border-radius: 20px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .footer div ul .bold{
+        font-size: 22px;
+        color:white;
+        font-weight: bold;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .footer div p{
+        font-size: 30px;
+        margin-left: 30px;
+        color:rgb(200, 245, 38);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+     .box input {
+        margin-top: 50px;
+        border-radius: 10px;
+        border:none;
+        outline:none;
+        border-bottom: 3px solid greenyellow;
+        color:white;
+        background-color: black;
+        width:350px;
+        height:50px;
+        font-size: 16px;
+        padding-left:20px;
+    }
+     .box button {
+        width:150px;
+        height:50px;
+        font-size: 20px;
+        background-color: greenyellow;
+        color:crimson;
+        border-radius: 10px;
+        border: none;
+    }
+    .box button:hover {
+        background-color: red;
+        color:white;
+    }
+    .box{
+        margin-top: -180px;
+        margin-left: 450px;
+    }
+
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+        
+    <img class="logo" src="images/footer.jpeg" width="100px">
+
+
+    <ul class="topics">
+        <li><a href="Homepage.html" target="_blank">Home</a></li>
+        <li><a href="livescore.html" target="_blank">Live Score</a></li>
+     
+       
+        <li>
+            <a href="#">News</a>
+            <div class="dropdown">
+                <a href="news.html" target="_blank">Updates</a>
+                <a href="india.html" target="_blank">Stats</a>
+                <a href="calendar.html" target="_blank">Event Calendar</a>
+            </div>
+        </li>
+
+        <li><a href="league.html" target="_blank">Fantasy Sports </a></li>
+        <li><a href="" target="_blank">More</a>
+            <div class="dropdown">
+                <a href="Gallery.html" target="_blank">Gallery</a>
+                <a href="ps.html" target="_blank">Privacy & security</a>
+                <a href="commutatory.html" target="_blank">Community & Forums</a>
+
+            </div>
+            <li><a href="Loginsingup.html" target="_blank">LogOut</a>
+        </li>
+        
+    </ul> 
+        
+        <div class="buttons">
+      <a href="sub.html"><button >subscribe</button></a>
+       <a href="shop.html"><button >Shop</button></a>
+        </ul>
+    </div>
+       
+</nav>
+    <div class="contain">
+        <h1>Gallery</h1>
+    </div>
+    <div class="photo">
+        <img src="images/cricket1.jpeg">
+        <img src="images/football.jpg">
+        <img src="images/hockey.jpeg">
+        <img src="images/tennis.jpeg">
+        <img src="images/badminton.jpg">
+        <img src="images/volleyball.jpeg">
+    </div>
+    <div class="A">
+        <h1>Cricket</h1>
+    </div>
+    <div class="rotate">
+        <div class="image-container">
+            <span style="--i: 1">
+              <img src="images/cricket1.avif" />
+            </span>
+            <span style="--i: 2">
+              <img src="images/ind team.jpg"/>
+            </span>
+            <span style="--i: 3">
+              <img src="images/south-africa.jpg"/>
+            </span>
+            <span style="--i: 4">
+              <img src="images/cricket2.avif"/>
+            </span>
+            <span style="--i: 5">
+              <img src="images/cricket3.avif"/>
+            </span>
+            <span style="--i: 6">
+              <img src="images/cricket4.jpg"/>
+            </span>
+            <span style="--i: 7">
+              <img src="images/cricket5.avif"/>
+            </span>
+            <span style="--i: 8">
+              <img src="images/cricket6.avif"/>
+            </span>
+          </div>
+          <div class="btn-container">
+            <button class="btn1" id="prev">Prev</button>
+            <button class="btn2" id="next">Next</button>
+          </div>
+    </div>
+    <div class="A">
+      <h1>Cricket HighLights</h1>
+  </div>
+  <div class="rotate">
+      <div class="image-container">
+          <span style="--i: 1">
+            <iframe src="https://www.youtube.com/embed/4X00o7WHWRk?si=o9TQKc3ecOucKczi"></iframe>
+          </span>
+          <span style="--i: 2">
+            <iframe src="https://www.youtube.com/embed/IZT8yMI76ws?si=f0_dzOnZiiFHSdO6"></iframe>
+          </span>
+          <span style="--i: 3">
+            <iframe src="https://www.youtube.com/embed/Nebv9ZT2e74?si=-6EwcZubRnvqw_Uc"></iframe>
+          </span>
+          <span style="--i: 4">
+            <iframe src="https://www.youtube.com/embed/WQdqgrWvy6g?si=8uUfwzWfjdP0gbr4"></iframe>
+          </span>
+          <span style="--i: 5">
+            <iframe src="https://www.youtube.com/embed/4X00o7WHWRk?si=o9TQKc3ecOucKczi"></iframe>
+          </span>
+          <span style="--i: 6">
+            <iframe src="https://www.youtube.com/embed/IZT8yMI76ws?si=f0_dzOnZiiFHSdO6"></iframe>
+          </span>
+          <span style="--i: 7">
+            <iframe src="https://www.youtube.com/embed/Nebv9ZT2e74?si=-6EwcZubRnvqw_Uc"></iframe>
+          </span>
+          <span style="--i: 8">
+            <iframe src="https://www.youtube.com/embed/WQdqgrWvy6g?si=8uUfwzWfjdP0gbr4"></iframe>
+          </span>
+        </div>
+        <div class="btn-container">
+          <button class="btn1" id="prev">Prev</button>
+          <button class="btn2" id="next">Next</button>
+        </div>
+  </div>
+   
+    <div class="A">
+      <h1>FootBall</h1>
+  </div>
+  <div class="rotate">
+      <div class="image-container">
+          <span style="--i: 1">
+            <img src="images/football1.jpg" />
+          </span>
+          <span style="--i: 2">
+            <img src="images/football2.jpg"/>
+          </span>
+          <span style="--i: 3">
+            <img src="images/football3.jpg"/>
+          </span>
+          <span style="--i: 4">
+            <img src="images/football4.jpg"/>
+          </span>
+          <span style="--i: 5">
+            <img src="images/football5.jpg"/>
+          </span>
+          <span style="--i: 6">
+            <img src="images/football6.avif" />
+          </span>
+          <span style="--i: 7">
+            <img src="images/football7.jpg" />
+          </span>
+          <span style="--i: 8">
+            <img src="images/football1.jpg"/>
+          </span>
+        </div>
+        <div class="btn-container">
+          <button class="btn1" id="prev">Prev</button>
+          <button class="btn2" id="next">Next</button>
+        </div>
+  </div>
+  <div class="A">
+    <h1>FootBall HighLights</h1>
+</div>
+<div class="rotate">
+    <div class="image-container">
+        <span style="--i: 1">
+          <iframe src="https://www.youtube.com/embed/w6_GkG8ct_I?si=BVIXp8VngweXIpIG"></iframe>
+        </span>
+        <span style="--i: 2">
+          <iframe src="https://www.youtube.com/embed/VAaUNIejxkk?si=bal221-AH4lrthl1"></iframe>
+        </span>
+        <span style="--i: 3">
+          <iframe src="https://www.youtube.com/embed/w6_GkG8ct_I?si=BVIXp8VngweXIpIG"></iframe> 
+        </span>
+        <span style="--i: 4">
+          <iframe src="https://www.youtube.com/embed/4GaFBBsxjCE?si=cry1_85R8PHPNLa4"></iframe>
+        </span>
+        <span style="--i: 5">
+          <iframe src="https://www.youtube.com/embed/VAaUNIejxkk?si=bal221-AH4lrthl1"></iframe>
+        </span>
+        <span style="--i: 6">
+          <iframe src="https://www.youtube.com/embed/4GaFBBsxjCE?si=cry1_85R8PHPNLa4"></iframe>
+        </span>
+        <span style="--i: 7">
+          <iframe src="https://www.youtube.com/embed/w6_GkG8ct_I?si=BVIXp8VngweXIpIG"></iframe>
+        </span>
+        <span style="--i: 8">
+          <iframe src="https://www.youtube.com/embed/4GaFBBsxjCE?si=cry1_85R8PHPNLa4"></iframe>
+        </span>
+      </div>
+      <div class="btn-container">
+        <button class="btn1" id="prev">Prev</button>
+        <button class="btn2" id="next">Next</button>
+      </div>
+</div>
+  <div class="A">
+    <h1>Hockey</h1>
+</div>
+<div class="rotate">
+    <div class="image-container">
+        <span style="--i: 1">
+          <img src="images/hockey1.jpg" />
+        </span>
+        <span style="--i: 2">
+          <img src="images/hockey2.avif"/>
+        </span>
+        <span style="--i: 3">
+          <img src="images/hockey3.avif"/>
+        </span>
+        <span style="--i: 4">
+          <img src="images/hockey4.avif"/>
+        </span>
+        <span style="--i: 5">
+          <img src="images/hockey5.avif"/>
+        </span>
+        <span style="--i: 6">
+          <img src="images/hockey6.jpg" />
+        </span>
+        <span style="--i: 7">
+          <img src="images/hockey7.avif" />
+        </span>
+        <span style="--i: 8">
+          <img src="images/hockey8.jpg"/>
+        </span>
+      </div>
+      <div class="btn-container">
+        <button class="btn1" id="prev">Prev</button>
+        <button class="btn2" id="next">Next</button>
+      </div>
+</div>
+<div class="A">
+  <h1>Hockey HighLights</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+      <span style="--i: 1">
+        <iframe src="https://www.youtube.com/embed/w_fTdookKi4?si=neswVfTHfwt0B1Bb"></iframe>
+      </span>
+      <span style="--i: 2">
+        <iframe src="https://www.youtube.com/embed/Ndw5Ofu_ucc?si=XaTB5N_mfoOIwPlZ"></iframe>
+      </span>
+      <span style="--i: 3">
+        <iframe src="https://www.youtube.com/embed/WZzYluxn2XM?si=p2WpsrARj75ivYMp"></iframe>
+      </span>
+      <span style="--i: 4">
+        <iframe src="https://www.youtube.com/embed/gTdTfxVkkJE?si=BcyOttFHI3JVPqpv"></iframe>
+      </span>
+      <span style="--i: 5">
+        <iframe src="https://www.youtube.com/embed/w_fTdookKi4?si=neswVfTHfwt0B1Bb"></iframe>
+      </span>
+      <span style="--i: 6">
+        <iframe src="https://www.youtube.com/embed/Ndw5Ofu_ucc?si=XaTB5N_mfoOIwPlZ"></iframe>
+      </span>
+      <span style="--i: 7">
+        <iframe src="https://www.youtube.com/embed/WZzYluxn2XM?si=p2WpsrARj75ivYMp"></iframe>
+      </span>
+      <span style="--i: 8">
+        <iframe src="https://www.youtube.com/embed/gTdTfxVkkJE?si=BcyOttFHI3JVPqpv"></iframe>
+      </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="A">
+  <h1>VolleyBall</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+      <span style="--i: 1">
+        <img src="images/volly1.avif" />
+      </span>
+      <span style="--i: 2">
+        <img src="images/volley2.jpg"/>
+      </span>
+      <span style="--i: 3">
+        <img src="images/volley3.jpg"/>
+      </span>
+      <span style="--i: 4">
+        <img src="images/volley4.avif"/>
+      </span>
+      <span style="--i: 5">
+        <img src="images/volley5.jpg"/>
+      </span>
+      <span style="--i: 6">
+        <img src="images/volly6.avif"/>
+      </span>
+      <span style="--i: 7">
+        <img src="images/volley7.jpg" />
+      </span>
+      <span style="--i: 8">
+        <img src="images/volley8.avif"/>
+      </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="A">
+  <h1>Volley Ball HighLights</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+    <span style="--i: 1">
+      <iframe src="https://www.youtube.com/embed/PoQA3KyLoV4?si=e2PByQCHsM_wjSH6"></iframe>
+    </span>
+    <span style="--i: 2">
+      <iframe src="https://www.youtube.com/embed/TLh3sIQVPtw?si=12vLYa3N1T7G0_Pq"></iframe>
+    </span>
+    <span style="--i: 3">
+      <iframe src="https://www.youtube.com/embed/QCJIb-tNzeI?si=qKdhlJW5ryVqsSQu"></iframe>
+    </span>
+    <span style="--i: 4">
+      <iframe src="https://www.youtube.com/embed/cDASJ7cq2-4?si=ODebF8Ac2Ici5rFV"></iframe>
+    </span>
+    <span style="--i: 5">
+      <iframe src="https://www.youtube.com/embed/PoQA3KyLoV4?si=e2PByQCHsM_wjSH6"></iframe>
+    </span>
+    <span style="--i: 6">
+      <iframe src="https://www.youtube.com/embed/TLh3sIQVPtw?si=12vLYa3N1T7G0_Pq"></iframe>
+    </span>
+    <span style="--i: 7">
+      <iframe src="https://www.youtube.com/embed/QCJIb-tNzeI?si=qKdhlJW5ryVqsSQu"></iframe>
+    </span>
+    <span style="--i: 8">
+      <iframe src="https://www.youtube.com/embed/cDASJ7cq2-4?si=ODebF8Ac2Ici5rFV"></iframe>
+    </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="A">
+  <h1>Tennis</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+      <span style="--i: 1">
+        <img src="images/tennis1.jpg" />
+      </span>
+      <span style="--i: 2">
+        <img src="images/tennis2.avif"/>
+      </span>
+      <span style="--i: 3">
+        <img src="images/tennis3.avif"/>
+      </span>
+      <span style="--i: 4">
+        <img src="images/tennis4.jpg"/>
+      </span>
+      <span style="--i: 5">
+        <img src="images/tennis5.avif"/>
+      </span>
+      <span style="--i: 6">
+        <img src="images/tennis6.jpg"/>
+      </span>
+      <span style="--i: 7">
+        <img src="images/tennis7.jpg"/>
+      </span>
+      <span style="--i: 8">
+        <img src="images/tennis8.avif"/>
+      </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="A">
+  <h1>Tennis HighLights</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+    <span style="--i: 1">
+      <iframe src="https://www.youtube.com/embed/Nsjl2_jrVEU?si=RerL7QCSqQdtjdoP"></iframe>
+    </span>
+    <span style="--i: 2">
+      <iframe src="https://www.youtube.com/embed/atFwhTVsy-Y?si=8PE116VuZBh6xOhu"></iframe>
+    </span>
+    <span style="--i: 3">
+      <iframe src="https://www.youtube.com/embed/atFwhTVsy-Y?si=8PE116VuZBh6xOhu"></iframe>
+    </span>
+    <span style="--i: 4">
+      <iframe src="https://www.youtube.com/embed/HPOZImerPM4?si=MPkXgoUaSDsoXwiD"></iframe>
+    </span>
+    <span style="--i: 5">
+      <iframe src="https://www.youtube.com/embed/Nsjl2_jrVEU?si=RerL7QCSqQdtjdoP"></iframe>
+    </span>
+    <span style="--i: 6">
+      <iframe src="https://www.youtube.com/embed/atFwhTVsy-Y?si=8PE116VuZBh6xOhu"></iframe>
+    </span>
+    <span style="--i: 7">
+      <iframe src="https://www.youtube.com/embed/atFwhTVsy-Y?si=8PE116VuZBh6xOhu"></iframe>
+    </span>
+    <span style="--i: 8">
+      <iframe src="https://www.youtube.com/embed/HPOZImerPM4?si=MPkXgoUaSDsoXwiD"></iframe>
+    </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="A">
+  <h1>Shuttle</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+      <span style="--i: 1">
+        <img src="images/shuttle1.avif" />
+      </span>
+      <span style="--i: 2">
+        <img src="images/shuttle2.avif"/>
+      </span>
+      <span style="--i: 3">
+        <img src="images/shuttle3.avif"/>
+      </span>
+      <span style="--i: 4">
+        <img src="images/shuttle4.avif"/>
+      </span>
+      <span style="--i: 5">
+        <img src="images/shuttle5.avif"/>
+      </span>
+      <span style="--i: 6">
+        <img src="images/shuttle3.avif"/>
+      </span>
+      <span style="--i: 7">
+        <img src="images/suttle7.avif" />
+      </span>
+      <span style="--i: 8">
+        <img src="images/shuttle8.avif"/>
+      </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="A">
+  <h1>Shuttle HighLights</h1>
+</div>
+<div class="rotate">
+  <div class="image-container">
+    <span style="--i: 1">
+      <iframe src="https://www.youtube.com/embed/0UrNkaoVypI?si=FWUbFa44cTOMUJgg"></iframe>
+    </span>
+    <span style="--i: 2">
+      <iframe src="https://www.youtube.com/embed/v0xxeAus7RU?si=5xQcyk_PNOvtp7W6"></iframe>
+    </span>
+    <span style="--i: 3">
+      <iframe src="https://www.youtube.com/embed/qo83zcWMffY?si=NBMbvlOL8QUU5tmZ"></iframe>
+    </span>
+    <span style="--i: 4">
+      <iframe src="https://www.youtube.com/embed/v0xxeAus7RU?si=5xQcyk_PNOvtp7W6"></iframe>
+    </span>
+    <span style="--i: 5">
+      <iframe src="https://www.youtube.com/embed/0UrNkaoVypI?si=FWUbFa44cTOMUJgg"></iframe>
+    </span>
+    <span style="--i: 6">
+      <iframe src="https://www.youtube.com/embed/v0xxeAus7RU?si=5xQcyk_PNOvtp7W6"></iframe>
+    </span>
+    <span style="--i: 7">
+      <iframe src="https://www.youtube.com/embed/qo83zcWMffY?si=NBMbvlOL8QUU5tmZ"></iframe>
+    </span>
+    <span style="--i: 8">
+      <iframe src="https://www.youtube.com/embed/v0xxeAus7RU?si=5xQcyk_PNOvtp7W6"></iframe>
+    </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn1" id="prev">Prev</button>
+      <button class="btn2" id="next">Next</button>
+    </div>
+</div>
+<div class="footer">
+  <div>
+      <ul>
+          <a href=""><li class="bold">Main Pages</li></a>
+          <a href="Homepage.html"><li>Home</li></a>
+          <a href="livescore.html"><li>Live score</li></a>
+          <a href="calendar.html"><li>Events</li></a>
+      </ul>
+  </div>
+  <div>
+      <ul>
+          <a href=""><li class="bold">Products</li></a>
+          <a href="shop.html"><li>shop</li></a>
+          <a href="sub.html"><li>Subscription</li></a>
+      </ul>
+  </div>
+  <div><img src="images/footer.jpeg">
+      
+  </div>
+  <div>
+      <ul>
+          <a href=""><li class="bold">Services</li></a>
+          <a href="Loginsingup.html"><li>Login</li></a>
+          <a href="Loginsingup.html"><li>signup</li></a>
+          <a href="ps.html"><li>Privacy</li></a>
+      </ul>
+  </div>
+  <div>
+      <ul>
+          <a href=""><li class="bold">Details</li></a>
+          <a href="calendar.html"><li>Events Calender</li></a>
+          <a href="league.html"><li>Featured Sports</li></a>
+          <a href="commutatory.html"><li>Community forum</li></a>
+      </ul>
+  </div>
+  </div>
+  <div class="box">
+  <input type="email" placeholder="Email" class="email">
+  <button class="button">Subscribe</button>
+  </div>
+  
+
+<script>
+  document.querySelectorAll('.rotate').forEach((container) => {
+      const loverboy = container.querySelectorAll(".image-container");
+      const vivekhero1 = container.querySelector(".btn1");
+      const vivekhero2 = container.querySelector(".btn2");
+      let x = 0;
+      
+      vivekhero1.addEventListener("click", () => {
+          x += 45;
+          vivek();
+      });
+      
+      vivekhero2.addEventListener("click", () => {
+          x -= 45;
+          vivek();
+      });
+      
+      function vivek() {
+          loverboy.forEach(element => {
+              element.style.transform = `perspective(1000px) rotateY(${x}deg)`;
+          });
+      }
+  });
+
+  </script>
+  
+</body>
+</html>
